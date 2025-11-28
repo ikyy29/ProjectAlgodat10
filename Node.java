@@ -4,8 +4,8 @@ class Node{
     Node next;
 
     Node(String buku, int halaman){
-        this.buku = null;
-        this.halaman = null;
+        this.buku = buku;
+        this.halaman = halaman;
         this.next = null;
 
     }

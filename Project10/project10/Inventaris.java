@@ -19,17 +19,17 @@ public class Inventaris {
     }
 
     public Barang cari(String nama) {
-        return searchRecursive(root, nama);
+        return carirekursif(root, nama);
     }
 
-    private Barang searchRecursive(Tree current, String nama) {
+    private Barang carirekursif(Tree current, String nama) {
         if (current == null) return null;
         if (nama.equalsIgnoreCase(current.data.nama)) return current.data;
 
         if (nama.compareToIgnoreCase(current.data.nama) < 0) {
-            return searchRecursive(current.left, nama);
+            return carirekursif(current.left, nama);
         } else {
-            return searchRecursive(current.right, nama);
+            return carirekursif(current.right, nama);
         }
     }
 
